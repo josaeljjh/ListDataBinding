@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "507834775533",
+    "firebase_url": "https://chalatefood.firebaseio.com",
+    "project_id": "chalatefood",
+    "storage_bucket": "chalatefood.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:507834775533:android:33355f72a8fef0093359e4",
+        "android_client_info": {
+          "package_name": "com.hdev.food"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "507834775533-46hrfo9j18ik1rv6bss7ksk2smcu9s4o.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hdev.food",
+            "certificate_hash": "f2a4d7ad441b83fd5496f2fe81b3e6f296538b99"
+          }
+        },
+        {
+          "client_id": "507834775533-tuulk5gdlv5v5i9s4l8q4vcj2vpfng2o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBT2hMANHE3FOBPi1Nq_YqE_hYx8zHodUs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "507834775533-tuulk5gdlv5v5i9s4l8q4vcj2vpfng2o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

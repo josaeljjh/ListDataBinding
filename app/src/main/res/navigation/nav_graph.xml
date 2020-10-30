@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/listFragment"
+    >
+
+    <action
+        android:id="@+id/action_mainFragment_to_viewList"
+        app:destination="@id/listFragment"
+        app:enterAnim="@anim/slide_in_left"
+        app:exitAnim="@anim/slide_out_right"
+        app:popEnterAnim="@anim/slide_in_right"
+        app:popExitAnim="@anim/slide_out_left"
+        app:launchSingleTop="true"
+        app:popUpTo="@+id/main_navigation"
+        app:popUpToInclusive="true"
+        />
+
+    <!-- listFragment -->
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="com.hdev.food.views.home.minicipios.HomeFragment"
+        android:label="fragment_view_transaction"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/food"
+            app:destination="@id/foodFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            />
+
+    </fragment>
+
+    <!-- FoodFragment -->
+    <fragment
+        android:id="@+id/foodFragment"
+        android:name="com.hdev.food.views.home.locales.FoodFragment"
+        android:label="fragment_view_transaction"
+        tools:layout="@layout/fragment_food">
+
+
+    </fragment>
+
+</navigation>

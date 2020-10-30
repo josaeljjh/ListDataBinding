@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        app:constraintSetEnd="@id/end"
+        app:constraintSetStart="@id/start">
+
+        <OnSwipe
+            app:dragDirection="dragUp"
+            app:touchAnchorId="@id/foodRecycler"
+            app:touchAnchorSide="top" />
+
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@id/headerFood"
+            android:layout_height="@dimen/_190sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            >
+            <CustomAttribute
+                app:attributeName="arcHeightDp"
+                app:customFloatValue="20" />
+        </Constraint>
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@id/headerFood"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_80sdp"
+            app:shape_arc_position="bottom"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            >
+            <CustomAttribute
+                app:attributeName="arcHeightDp"
+                app:customFloatValue="0" />
+
+        </Constraint>
+
+        <Constraint
+            android:id="@+id/cardview"
+            android:layout_width="@dimen/_250sdp"
+            android:layout_height="@dimen/_35sdp"
+            app:cardBackgroundColor="@color/card_dark"
+            app:cardCornerRadius="@dimen/_5sdp"
+            app:cardElevation="@dimen/_3sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/foodDivider"
+            android:alpha="1"
+            android:layout_marginBottom="@dimen/_10sdp"
+            >
+
+        </Constraint>
+
+    </ConstraintSet>
+
+</MotionScene>

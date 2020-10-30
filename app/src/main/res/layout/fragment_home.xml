@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/master"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blanco"
+    app:layoutDescription="@xml/collapsing_header_arc"
+    tools:context=".views.home.HomeHost">
+
+    <com.github.florent37.shapeofview.shapes.ArcView
+        android:id="@+id/headerHome"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_200sdp"
+        app:shape_arc_height="20dp"
+        app:shape_arc_position="bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:elevation="@dimen/_3sdp"
+        >
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/logoChalate"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/chalate"
+            android:elevation="@dimen/_10sdp"
+            />
+
+    </com.github.florent37.shapeofview.shapes.ArcView>
+
+    <View
+        android:id="@+id/toolbarDivider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/transparent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/headerHome" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_15sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarDivider"
+        app:layout_constraintVertical_bias="0.0"
+        tools:listitem="@layout/item_list" />
+
+</androidx.constraintlayout.motion.widget.MotionLayout>
